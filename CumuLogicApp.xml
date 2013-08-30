@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cumulogic-app>
+<application>
+  <application-context>sampledbapp</application-context>
+  <jndi-name/>
+  <db-name>sampledbapp</db-name>
+  <db-type>MySql</db-type>
+ <application-file-name>sampledbapp.tar.gz</application-file-name>
+</application>
+
+ <services>
+    <framework>
+      <type>Python</type>
+      <engine>Django-1.5.1</engine>
+      <no-of-nodes>1</no-of-nodes>
+      <max-nodes>1</max-nodes>
+    </framework>
+    <database>
+      <engine>MySQL-5.5.27</engine>
+      <no-of-nodes>1</no-of-nodes>
+      <storage>10</storage>
+      <config>
+        <master-username>demo</master-username>
+        <master-password>demo</master-password>
+        <port>3306</port>
+        <character-set>UTF-8</character-set>
+      </config>
+    </database>
+     <elastic-load-balancer>
+      <engine>Nginx-1.2</engine>
+    </elastic-load-balancer>
+  </services>
+</cumulogic-app>
